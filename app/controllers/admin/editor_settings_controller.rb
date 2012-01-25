@@ -1,4 +1,4 @@
-class Admin::EditorSettingsController < Admin::BaseController
+class Admin::EditorSettingsController < Spree::Admin::BaseController
   def update
     @config = Spree::Editor::Config.instance
     @config.update_attributes(params[@config.class.name.underscore])
